@@ -1,0 +1,11 @@
+<a routerLink="/addadmin"> Add Admin</a>
+
+<div *ngFor="let adm of admin">
+    <h3>{{adm.id}}</h3>
+    <h3>{{adm.username}}</h3>
+    <h3>{{adm.emailId}}</h3>
+    <h3>{{adm.password}}</h3>
+    <a routerLink="/editadmin/{{adm.id}}">Edit</a>
+    <button (click)= "deleteAdmin(adm.id)">Delete</button>
+
+</div>
